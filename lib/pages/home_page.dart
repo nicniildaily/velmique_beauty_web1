@@ -95,7 +95,8 @@ class HeroSection extends StatelessWidget {
         Expanded(
           child: Image.asset(
             'assets/images/promo1.png',
-            height: 450,
+            height: 400,
+
             fit: BoxFit.contain,
           ).animate().fadeIn(duration: 800.ms).scale(begin: const Offset(0.8, 0.8)),
         ),
@@ -121,69 +122,52 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SectionContainer(
-      title: 'What is Velmique?',
-      subtitle: 'Solving beauty shopping challenges in Kenya',
-      child: Column(children: [_buildProblemSolutionRow()]),
-    );
-  }
-
-  Widget _buildProblemSolutionRow() {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      spacing: 24,
-      runSpacing: 24,
-      children: [
-        _buildCard(
-          'The Problem',
-          'Difficulty finding trusted beauty products in Kenya, scattered sellers, fake products, and inconvenient shopping experience.',
-          Icons.warning_amber_rounded,
-          AppColors.primary,
-        ),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-          decoration: BoxDecoration(
-            color: AppColors.accent.withValues(alpha: 0.1),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: const Text('➜', style: TextStyle(fontSize: 24, color: AppColors.accent)),
-        ),
-        _buildCard(
-          'The Solution',
-          'Velmique connects you with trusted beauty vendors, easy browsing, secure shopping, and beauty delivered conveniently to your door.',
-          Icons.check_circle_rounded,
-          AppColors.accent,
-        ),
-      ],
-    );
-  }
-
-  Widget _buildCard(String title, String content, IconData icon, Color color) {
     return Container(
-      constraints: const BoxConstraints(maxWidth: 320),
-      padding: const EdgeInsets.all(24),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [BoxShadow(color: color.withValues(alpha: 0.15), blurRadius: 20, offset: const Offset(0, 8))],
-      ),
+      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 24),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(color: color.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(12)),
-            child: Icon(icon, color: color, size: 24),
+          const Text(
+            'Why Velmique?',
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
+            textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 8),
           Text(
-            title,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: color),
+            'Solving beauty shopping challenges in Kenya',
+            style: TextStyle(fontSize: 16, color: AppColors.textSecondary),
+            textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 12),
-          Text(content, style: const TextStyle(fontSize: 15, color: AppColors.textSecondary, height: 1.5)),
+          const SizedBox(height: 40),
+          _buildProblemSolutionStack(),
         ],
       ),
+    );
+  }
+
+  Widget _buildProblemSolutionStack() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'The Problem',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.primary),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          'Difficulty finding trusted beauty products in Kenya, scattered sellers, fake products, and inconvenient shopping experience.',
+          style: const TextStyle(fontSize: 15, color: AppColors.textSecondary, height: 1.5),
+        ),
+        const SizedBox(height: 32),
+        Text(
+          'The Solution',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.accent),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          'Velmique connects you with trusted beauty vendors, easy browsing, secure shopping, and beauty delivered conveniently to your door.',
+          style: const TextStyle(fontSize: 15, color: AppColors.textSecondary, height: 1.5),
+        ),
+      ],
     );
   }
 }
@@ -504,19 +488,19 @@ class DownloadCtaSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GradientCard(
-      padding: const EdgeInsets.all(40),
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 24),
       child: Column(
         children: [
-          const Text(
+          Text(
             'Ready to Upgrade Your Beauty Shopping?',
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
           Text(
             'Download Velmique Beauty today and discover your new favorite beauty marketplace.',
-            style: TextStyle(fontSize: 16, color: Colors.white.withValues(alpha: 0.9)),
+            style: TextStyle(fontSize: 16, color: AppColors.textSecondary),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 32),
@@ -529,12 +513,12 @@ class DownloadCtaSection extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: () => context.go('/download'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: AppColors.primary,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  backgroundColor: AppColors.accent,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                 ),
-                icon: const Icon(Icons.download_rounded),
+                icon: const Icon(Icons.download_rounded, size: 26),
                 label: const Text('Download APK'),
               ),
             ],

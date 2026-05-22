@@ -25,27 +25,17 @@ class AppFooter extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
             child: Column(
               children: [
-                Image.asset(
-                  'assets/images/logo.png',
-                  height: 50,
-                  fit: BoxFit.contain,
-                ),
-                const SizedBox(height: 16),
+                //Image.asset('assets/images/logo.png', height: 50, fit: BoxFit.contain),
+                //const SizedBox(height: 16),
                 _buildNavLinks(context),
                 const SizedBox(height: 20),
-                _buildSocialIcons(),
-                const SizedBox(height: 20),
-                Container(
-                  height: 1,
-                  color: Colors.white.withValues(alpha: 0.2),
-                ),
-                const SizedBox(height: 16),
+                // _buildSocialIcons(),
+                /* const SizedBox(height: 20),
+                Container(height: 1, color: Colors.white.withValues(alpha: 0.2)),
+                const SizedBox(height: 16), */
                 Text(
                   '© 2026 Velmique Beauty. All rights reserved.',
-                  style: TextStyle(
-                    color: Colors.white.withValues(alpha: 0.8),
-                    fontSize: 12,
-                  ),
+                  style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 12),
                 ),
               ],
             ),
@@ -74,20 +64,14 @@ class AppFooter extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-            child: Text(
-              item.$1,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-              ),
-            ),
+            child: Text(item.$1, style: const TextStyle(color: Colors.white, fontSize: 14)),
           ),
         );
       }).toList(),
     );
   }
 
-  Widget _buildSocialIcons() {
+  /*  Widget _buildSocialIcons() {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -100,16 +84,13 @@ class AppFooter extends StatelessWidget {
         _socialIcon(Icons.alternate_email),
       ],
     );
-  }
+  } */
 
-  Widget _socialIcon(IconData icon) {
+  /* Widget _socialIcon(IconData icon) {
     return Container(
       padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.2),
-        borderRadius: BorderRadius.circular(50),
-      ),
+      decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.2), borderRadius: BorderRadius.circular(50)),
       child: Icon(icon, color: Colors.white, size: 20),
     );
-  }
+  } */
 }

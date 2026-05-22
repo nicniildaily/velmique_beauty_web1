@@ -34,25 +34,25 @@ class _AppHeaderState extends State<AppHeader> {
     });
   }
 
-@override
+  @override
   Widget build(BuildContext context) {
     final currentPath = GoRouterState.of(context).matchedLocation;
     final mobile = MediaQuery.of(context).size.width < 768;
-    
+
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       width: double.infinity,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: _isScrolled 
-            ? [_brandPurple.withValues(alpha: 0.98), _brandAccent.withValues(alpha: 0.98)]
-            : [_brandPurple, _brandAccent],
+          colors: _isScrolled
+              ? [_brandPurple.withValues(alpha: 0.98), _brandAccent.withValues(alpha: 0.98)]
+              : [_brandPurple, _brandAccent],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        boxShadow: _isScrolled 
-          ? [BoxShadow(color: _brandPurple.withValues(alpha: 0.4), blurRadius: 20, offset: Offset(0, 4))]
-          : null,
+        boxShadow: _isScrolled
+            ? [BoxShadow(color: _brandPurple.withValues(alpha: 0.4), blurRadius: 20, offset: Offset(0, 4))]
+            : null,
       ),
       child: SafeArea(
         child: Container(
@@ -62,17 +62,10 @@ class _AppHeaderState extends State<AppHeader> {
             children: [
               GestureDetector(
                 onTap: () => context.go('/'),
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  height: 60,
-                  fit: BoxFit.contain,
-                ),
+                child: Image.asset('assets/images/logo.png', height: 80, fit: BoxFit.contain),
               ),
               const Spacer(),
-              if (!mobile)
-                _buildNavLinks(currentPath)
-              else
-                _buildMobileMenu(currentPath),
+              if (!mobile) _buildNavLinks(currentPath) else _buildMobileMenu(currentPath),
             ],
           ),
         ),
@@ -164,11 +157,7 @@ class _AppHeaderState extends State<AppHeader> {
         ),
         child: Text(
           label,
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: isActive ? FontWeight.w600 : FontWeight.w500,
-            fontSize: 16,
-          ),
+          style: TextStyle(color: Colors.white, fontWeight: isActive ? FontWeight.w600 : FontWeight.w500, fontSize: 16),
         ),
       ),
     );

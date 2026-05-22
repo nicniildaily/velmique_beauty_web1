@@ -86,7 +86,7 @@ class GooglePlayButton extends StatefulWidget {
   final VoidCallback? onPressed;
   final bool isSmall;
 
-  const GooglePlayButton({super.key, this.label = 'Get it on Google Play', this.onPressed, this.isSmall = false});
+  const GooglePlayButton({super.key, this.label = 'Google Play', this.onPressed, this.isSmall = false});
 
   @override
   State<GooglePlayButton> createState() => _GooglePlayButtonState();
@@ -99,37 +99,16 @@ class _GooglePlayButtonState extends State<GooglePlayButton> {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => _isHovered = true),
-      onExit: (_) => setState(() => _isHovered = false),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        transform: Matrix4.identity()..scale(_isHovered ? 1.03 : 1.0),
-        child: ElevatedButton.icon(
-          onPressed: widget.onPressed,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: _isHovered ? _brandAccent : _brandPurple,
-            foregroundColor: Colors.white,
-            padding: EdgeInsets.symmetric(horizontal: widget.isSmall ? 20 : 28, vertical: widget.isSmall ? 12 : 16),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          ),
-          icon: Icon(Icons.play_arrow_rounded, size: widget.isSmall ? 22 : 26),
-          label: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'GET IT ON',
-                style: TextStyle(fontSize: widget.isSmall ? 8 : 10, fontWeight: FontWeight.w500, letterSpacing: 0.5),
-              ),
-              Text(
-                widget.label,
-                style: TextStyle(fontSize: widget.isSmall ? 14 : 16, fontWeight: FontWeight.w600),
-              ),
-            ],
-          ),
-        ),
+    return ElevatedButton.icon(
+      onPressed: widget.onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: _isHovered ? _brandAccent : _brandPurple,
+        foregroundColor: Colors.white,
+        padding: EdgeInsets.symmetric(horizontal: widget.isSmall ? 20 : 28, vertical: widget.isSmall ? 12 : 16),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
+      icon: Icon(Icons.play_arrow_rounded, size: widget.isSmall ? 22 : 26),
+      label: Text(widget.label, style: TextStyle(fontSize: widget.isSmall ? 14 : 16, fontWeight: FontWeight.w600)),
     );
   }
 }
@@ -145,10 +124,10 @@ class GradientCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: AppColors.primaryGradient,
+        border: Border.all(color: Colors.black, width: 2),
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
-          BoxShadow(color: AppColors.primary.withValues(alpha: 0.3), blurRadius: 20, offset: const Offset(0, 10)),
+          BoxShadow(color: AppColors.primary.withValues(alpha: 0.2), blurRadius: 20, offset: const Offset(0, 10)),
         ],
       ),
       child: Material(
