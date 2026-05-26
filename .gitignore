@@ -44,5 +44,3 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Local APK files (built from separate Android project)
-/web/*.apk
