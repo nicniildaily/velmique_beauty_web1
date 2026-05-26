@@ -28,7 +28,11 @@ jobs:
           flutter pub get
           flutter build web --release --base-href "/velmique_beauty_web1/"
 
-      # 4. Deploy to the gh-pages branch
+      # 4. Copy APK into deploy directory
+      - name: Copy APK
+        run: cp web/velmique_beauty.apk build/web/velmique_beauty.apk
+
+      # 5. Deploy to the gh-pages branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

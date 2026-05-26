@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+class AppConfig {
+  static const String apkDownloadUrl =
+      'https://nicniildaily.github.io/velmique_beauty_web1/velmique_beauty.apk';
+}
+
 class AppColors {
   static const Color primary = Color.fromARGB(255, 87, 1, 119);
   static const Color accent = Color.fromARGB(255, 176, 30, 229);

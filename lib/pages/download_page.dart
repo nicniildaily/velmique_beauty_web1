@@ -1,9 +1,18 @@
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../components/common_widgets.dart';
 
 class DownloadPage extends StatelessWidget {
   const DownloadPage({super.key});
+
+  void _downloadApk() {
+    html.AnchorElement(
+      href: AppConfig.apkDownloadUrl,
+    )
+      ..setAttribute('download', 'velmique_beauty.apk')
+      ..click();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +42,13 @@ class DownloadPage extends StatelessWidget {
               alignment: WrapAlignment.center,
               spacing: 16,
               runSpacing: 16,
-              children: const [
-                GooglePlayButton(),
-                PrimaryButton(label: 'Download APK', icon: Icons.download_rounded),
+              children: [
+                const GooglePlayButton(),
+                PrimaryButton(
+                  label: 'Download APK',
+                  icon: Icons.download_rounded,
+                  onPressed: _downloadApk,
+                ),
               ],
             ),
             const SizedBox(height: 60),

@@ -1,8 +1,16 @@
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:go_router/go_router.dart';
 import '../core/theme.dart';
 import '../components/common_widgets.dart';
+
+void _downloadApk() {
+  html.AnchorElement(
+    href: AppConfig.apkDownloadUrl,
+  )
+    ..setAttribute('download', 'velmique_beauty.apk')
+    ..click();
+}
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -111,7 +119,11 @@ class HeroSection extends StatelessWidget {
       runSpacing: 16,
       children: [
         const GooglePlayButton(label: 'Google Play'),
-        PrimaryButton(label: 'Download APK', icon: Icons.download_rounded),
+        PrimaryButton(
+          label: 'Download APK',
+          icon: Icons.download_rounded,
+          onPressed: _downloadApk,
+        ),
       ],
     );
   }
@@ -154,7 +166,7 @@ class AboutSection extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         Text(
-          'Difficulty finding trusted beauty products in Kenya, scattered sellers, fake products, and inconvenient shopping experience.',
+          'Difficulty finding trusted beauty products in Kenya, scattered sellers and inconvenient shopping experience.',
           style: const TextStyle(fontSize: 15, color: AppColors.textSecondary, height: 1.5),
         ),
         const SizedBox(height: 32),
@@ -511,7 +523,7 @@ class DownloadCtaSection extends StatelessWidget {
             children: [
               const GooglePlayButton(label: 'Google Play'),
               ElevatedButton.icon(
-                onPressed: () => context.go('/download'),
+                onPressed: _downloadApk,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.accent,
                   foregroundColor: Colors.white,
