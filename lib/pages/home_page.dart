@@ -5,9 +5,7 @@ import '../core/theme.dart';
 import '../components/common_widgets.dart';
 
 void _downloadApk() {
-  html.AnchorElement(
-    href: AppConfig.apkDownloadUrl,
-  )
+  html.AnchorElement(href: AppConfig.apkDownloadUrl)
     ..setAttribute('download', 'velmique_beauty.apk')
     ..click();
 }
@@ -51,8 +49,8 @@ class HeroSection extends StatelessWidget {
       children: [
         Image.asset(
           'assets/images/promo1.png',
-          height: 280,
-          fit: BoxFit.contain,
+          height: 700,
+          fit: BoxFit.none,
         ).animate().fadeIn(duration: 600.ms).scale(begin: const Offset(0.9, 0.9)),
         const SizedBox(height: 32),
         Text(
@@ -103,7 +101,7 @@ class HeroSection extends StatelessWidget {
         Expanded(
           child: Image.asset(
             'assets/images/promo1.png',
-            height: 400,
+            height: 600,
 
             fit: BoxFit.contain,
           ).animate().fadeIn(duration: 800.ms).scale(begin: const Offset(0.8, 0.8)),
@@ -119,11 +117,7 @@ class HeroSection extends StatelessWidget {
       runSpacing: 16,
       children: [
         const GooglePlayButton(label: 'Google Play'),
-        PrimaryButton(
-          label: 'Download APK',
-          icon: Icons.download_rounded,
-          onPressed: _downloadApk,
-        ),
+        PrimaryButton(label: 'Download APK', icon: Icons.download_rounded, onPressed: _downloadApk),
       ],
     );
   }

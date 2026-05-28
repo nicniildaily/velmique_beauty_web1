@@ -17,9 +17,10 @@ class DownloadPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        constraints: const BoxConstraints(maxWidth: 800),
-        padding: const EdgeInsets.all(24),
+      child: Center(
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 800),
+          padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -55,6 +56,7 @@ class DownloadPage extends StatelessWidget {
             _buildInstallationGuide(),
           ],
         ),
+      ),
       ),
     );
   }

@@ -18,39 +18,31 @@ class _ContactPageState extends State<ContactPage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        constraints: const BoxConstraints(maxWidth: 800),
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(height: 40),
-            const Text(
-              'Contact Us',
-              style: TextStyle(
-                fontSize: 36,
-                fontWeight: FontWeight.bold,
-                color: AppColors.textPrimary,
-              ),
+      child: Center(
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 800),
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(height: 40),
+              const Text(
+                'Contact Us',
+              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
             ),
             const SizedBox(height: 16),
             Text(
               'We\'d love to hear from you. Send us a message and we\'ll respond as soon as possible.',
-              style: const TextStyle(
-                fontSize: 16,
-                color: AppColors.textSecondary,
-              ),
+              style: const TextStyle(fontSize: 16, color: AppColors.textSecondary),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 40),
-            if (_isSubmitted)
-              _buildSuccessMessage()
-            else
-              _buildContactForm(),
+            if (_isSubmitted) _buildSuccessMessage() else _buildContactForm(),
             const SizedBox(height: 40),
-            _buildContactInfo(),
+            // _buildContactInfo(),
           ],
         ),
+      ),
       ),
     );
   }
@@ -68,11 +60,7 @@ class _ContactPageState extends State<ContactPage> {
           const SizedBox(height: 16),
           const Text(
             'Message Sent!',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: AppColors.primary,
-            ),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.primary),
           ),
           const SizedBox(height: 8),
           const Text(
@@ -81,10 +69,7 @@ class _ContactPageState extends State<ContactPage> {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          TextButton(
-            onPressed: () => setState(() => _isSubmitted = false),
-            child: const Text('Send another message'),
-          ),
+          TextButton(onPressed: () => setState(() => _isSubmitted = false), child: const Text('Send another message')),
         ],
       ),
     );
@@ -96,13 +81,7 @@ class _ContactPageState extends State<ContactPage> {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
-        ],
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 4))],
       ),
       child: Form(
         key: _formKey,
@@ -123,7 +102,11 @@ class _ContactPageState extends State<ContactPage> {
             const SizedBox(height: 20),
             TextFormField(
               controller: _messageController,
-              decoration: const InputDecoration(labelText: 'Message', prefixIcon: Icon(Icons.message_outlined), alignLabelWithHint: true),
+              decoration: const InputDecoration(
+                labelText: 'Message',
+                prefixIcon: Icon(Icons.message_outlined),
+                alignLabelWithHint: true,
+              ),
               maxLines: 5,
               validator: (value) => value == null || value.isEmpty ? 'Please enter your message' : null,
             ),
@@ -132,9 +115,7 @@ class _ContactPageState extends State<ContactPage> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: _submitForm,
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                ),
+                style: ElevatedButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 16)),
                 child: const Text('Send Message'),
               ),
             ),
@@ -153,7 +134,7 @@ class _ContactPageState extends State<ContactPage> {
     }
   }
 
-  Widget _buildContactInfo() {
+  /*  Widget _buildContactInfo() {
     return Container(
       padding: const EdgeInsets.all(32),
       decoration: BoxDecoration(
@@ -215,7 +196,7 @@ class _ContactPageState extends State<ContactPage> {
         ],
       ),
     );
-  }
+  } */
 
   Widget _buildInfoRow(IconData icon, String label, String value) {
     return Row(
