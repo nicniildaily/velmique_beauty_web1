@@ -27009,7 +27009,7 @@ $S:2}
 A.arP.prototype={
 $1(a){var s=A.d6().b
 s=s==null?null:s.canvasKitBaseUrl
-return(s==null?"https://www.gstatic.com/flutter-canvaskit/4c525dac5ebe5971c5708ef73558ed8edcf4a362/":s)+a},
+return(s==null?"https://www.gstatic.com/flutter-canvaskit/c416acfeb8126e097f758c664aaa3da929e27da0/":s)+a},
 $S:94}
 A.LN.prototype={
 gu(a){var s=this.a
@@ -85668,7 +85668,7 @@ else r.push(this.a2k())
 r.push(B.bb)
 return A.Og(A.f9(A.cg(s,A.ct(r,B.M,B.L,B.H),B.q,s,B.db,s,s,s,s,B.cn,s,s,s),s,s))},
 a2C(){var s=null,r=B.W.d9(0.1),q=A.cj(16)
-return A.cg(s,A.ct(A.b([B.Fg,B.bE,B.U9,B.dN,B.Ue,B.lm,A.agA(B.U1,new A.ak_(this),s)],t.p),B.M,B.L,B.H),B.q,s,s,new A.cf(r,s,s,q,s,s,B.Y),s,s,s,B.jB,s,s,s)},
+return A.cg(s,A.ct(A.b([B.Fg,B.bE,B.U9,B.dN,B.Uf,B.lm,A.agA(B.U1,new A.ak_(this),s)],t.p),B.M,B.L,B.H),B.q,s,s,new A.cf(r,s,s,q,s,s,B.Y),s,s,s,B.jB,s,s,s)},
 a2k(){var s=this,r=null,q=A.cj(20),p=A.b([new A.cB(0,B.b6,B.l.d9(0.05),B.cU,10)],t.E),o=A.ct(A.b([A.avl(s.e,B.FJ,r,1,new A.ajW()),B.i6,A.avl(s.f,B.FI,B.zp,1,new A.ajX()),B.i6,A.avl(s.r,B.FH,r,5,new A.ajY()),B.lm,A.BS(A.ayK(B.Ua,s.gael(),A.Ka(r,r,r,r,r,r,r,r,r,r,r,r,B.Eb,r,r,r,r,r,r,r)),r,1/0)],t.p),B.M,B.L,B.H)
 return A.cg(r,new A.yT(o,B.iU,s.d),B.q,r,r,new A.cf(B.i,r,r,q,p,r,B.Y),r,r,r,B.jB,r,r,r)},
 aem(){var s,r,q=this,p=q.d.gM()
@@ -85797,7 +85797,7 @@ o=t.p
 return A.cg(n,A.ct(A.b([r,B.f7,q,B.bE,A.nf(A.b([new A.IK(A.bD(a[0],n,n,n,B.TB,n,n),p,18,n),B.yY,A.ct(A.b([A.bD(a,n,n,n,B.Rh,n,n),A.bD(b,n,n,n,B.zu,n,n)],o),B.ap,B.L,B.H)],o),B.M,B.H,0)],o),B.ap,B.L,B.H),B.q,n,B.mb,new A.cf(B.i,n,n,m,l,n,B.Y),n,n,n,B.cn,n,n,n)}}
 A.K2.prototype={
 K(a){var s=null,r=t.p
-return A.cg(s,A.ct(A.b([A.bD("Ready to Upgrade Your Beauty Shopping?",s,s,s,A.d2(s,s,B.ak,s,s,s,s,s,s,s,s,28,s,s,B.a1,s,s,!0,s,s,s,s,s,s,s,s),B.aD,s),B.bE,A.bD("Download Velmique Beauty today and discover your new favorite beauty marketplace.",s,s,s,A.d2(s,s,B.bi,s,s,s,s,s,s,s,s,16,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.aD,s),B.dM,A.vc(B.cv,A.b([B.kh,A.ayL(B.Fi,B.Uf,A.aDY(),A.Ka(s,s,B.cl,s,s,s,s,s,s,B.i,s,s,B.jA,s,new A.cC(A.cj(12),B.r),s,s,s,s,s))],r),16,16)],r),B.M,B.L,B.H),B.q,s,s,s,s,s,s,B.nc,s,s,s)}}
+return A.cg(s,A.ct(A.b([A.bD("Ready to Upgrade Your Beauty Shopping?",s,s,s,A.d2(s,s,B.ak,s,s,s,s,s,s,s,s,28,s,s,B.a1,s,s,!0,s,s,s,s,s,s,s,s),B.aD,s),B.bE,A.bD("Download Velmique Beauty today and discover your new favorite beauty marketplace.",s,s,s,A.d2(s,s,B.bi,s,s,s,s,s,s,s,s,16,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.aD,s),B.dM,A.vc(B.cv,A.b([B.kh,A.ayL(B.Fi,B.Ue,A.aDY(),A.Ka(s,s,B.cl,s,s,s,s,s,s,B.i,s,s,B.jA,s,new A.cC(A.cj(12),B.r),s,s,s,s,s))],r),16,16)],r),B.M,B.L,B.H),B.q,s,s,s,s,s,s,B.nc,s,s,s)}}
 A.MN.prototype={
 K(a){var s=this,r=null
 return A.Og(A.f9(A.cg(r,A.ct(A.b([B.bb,B.U4,B.dN,B.zx,B.dM,s.lz("Introduction",'Velmique Beauty ("we", "our", or "us") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website.'),s.lz("Information We Collect","We may collect personal information that you voluntarily provide to us when you register on the App, express interest in obtaining information about us or our products, or otherwise contact us. This includes name, phone number, email address, and payment information."),s.lz("How We Use Your Information","We use your information to: Provide and improve our services, Process your transactions, Send you technical notices and support messages, Communicate with you about products, services, and events, Monitor and analyze trends and usage"),s.lz("Sharing Your Information","We do not sell, trade, or otherwise transfer your personal information to outside parties except as described in this policy. We may share information with service providers who assist us in operating our app."),s.lz("Data Security","We implement appropriate technical and organizational security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure."),s.lz("Your Rights","You have the right to access, correct, or delete your personal information. Contact us to exercise these rights."),s.lz("Changes to This Policy","We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page."),s.lz("Contact Us","If you have questions about this Privacy Policy, please contact us at support@velmique.co.ke"),B.bb],t.p),B.ap,B.L,B.H),B.q,r,B.db,r,r,r,r,B.cn,r,r,r),r,r))},
@@ -91087,8 +91087,8 @@ B.Ub=new A.dN("Page Not Found",null,B.ic,null,null,null,null,null,null)
 B.Uc=new A.dN("Home",null,null,null,null,null,null,null,null)
 B.R0=new A.l(!0,B.ak,null,null,null,null,24,B.a1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Ud=new A.dN("Installation Guide",null,B.R0,null,null,null,null,null,null)
-B.Ue=new A.dN("Thank you for contacting us. We'll get back to you soon.",null,B.zq,B.aD,null,null,null,null,null)
-B.Uf=new A.dN("Download APK",null,null,null,null,null,null,null,null)
+B.Ue=new A.dN("Download APK",null,null,null,null,null,null,null,null)
+B.Uf=new A.dN("Thank you for contacting us. We'll get back to you soon",null,B.zq,B.aD,null,null,null,null,null)
 B.XB=new A.ahk(0,"system")
 B.KL=new A.j(0.056,0.024)
 B.L0=new A.j(0.108,0.3085)
