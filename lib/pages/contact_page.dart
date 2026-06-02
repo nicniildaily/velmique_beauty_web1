@@ -64,7 +64,7 @@ class _ContactPageState extends State<ContactPage> {
           ),
           const SizedBox(height: 8),
           const Text(
-            'Thank you for contacting us. We\'ll get back to you soon.',
+            'Thank you for contacting us. We\'ll get back to you soon',
             style: TextStyle(color: AppColors.textSecondary),
             textAlign: TextAlign.center,
           ),
